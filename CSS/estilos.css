@@ -1,0 +1,41 @@
+body{
+    background: #b7abe0;
+    background-image: url ('https://drive.google.com/open?id=1K7IwoszOjkQ8ad0kyo0iP_Zy5ufNuNsa');
+    background-size: auto 100vh;
+    font-family: Verdana;
+    height: 100vh;
+  }
+  
+  .menu{
+      background-color: #ffffff;
+  }
+  
+  .menu ul{
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .menu li{
+    list-style: none;
+  }
+  
+  a{
+    color: #000000;
+    text-decoration: none;
+  }
+  
+  a:hover{
+    text-decoration: underline;
+    text-decoration-color: red;
+  }
+  
+  .site-subtitle,
+  .site-title{
+    color: purple;
+    text-align: center;
+  }
+  
+  .site-subtitle{
+    font-style: italic;
+  }
+  
