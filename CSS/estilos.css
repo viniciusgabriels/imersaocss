@@ -6,9 +6,9 @@
 
 body{
     background-image: url('../img/fundo.jpg');
-    background-size: auto 100vh;
+    background-size: 100vw 100vh;
     font-family: 'Overpass', sans-serif;
-    height: 100vh;
+    min-height: 100vh;
     font-size: 12px;
 }
 
@@ -32,18 +32,20 @@ header{
   justify-content: center;
   align-items: center;
 }    
-    
+ 
+
   .menu{
-      background-color: grey;
+      background-color: gray;
       position: fixed;
       width: 100vw;
       top: 0px;
+      z-index: 1;
   }
   
   .menu a{
-    /*background-color: gray;*/
     display: block;
     padding: 10px 20px;
+    transition: color 1s, background-color 1s;
   }
 
   .menu ul{
@@ -55,16 +57,42 @@ header{
     list-style: none;
   }
   
+  .menu a:active,
+  .menu a:hover{
+    background-color: rgb(38, 49, 150);
+    color: gray;
+  }
+
   a{
     color: rgb(38, 49, 150);
     text-decoration: none;
   }
   
+  a:active,
   a:hover{
     text-decoration: currentColor;
     text-decoration-color: black;
   }
   
+.titulo{
+  transform: scale(0.2) translateY(60vh);
+  opacity: 0;
+  animation: 1s ease 2s animaTitulo forwards;
+}
+
+@keyframes animaTitulo{
+  from{
+    transform: scale(0.2) translateY(60vh);
+    opacity: 0;
+  }
+  
+  to {
+    transform: scale(1) translateY(0);
+    opacity: 1;
+  }
+}
+
+
   .site-subtitle,
   .site-title{
     color: rgb(38, 49, 150);
@@ -81,10 +109,13 @@ header{
     line-height: 1.8em;
   }
  
+  .contato,
   .portfolio {
     padding: 2em;
+    min-height: 100vh;
   }
 
+  .contato h2,
   .portfolio h2 {
     font-size: 2em;
     font-family: 'Work Sans', sans-serif;
@@ -130,4 +161,26 @@ header{
     object-fit: cover;
     object-position: left bottom;
     border-radius: 5%;
+    transition: transform 500ms;
+  }
+
+  .img-portfolio:active,
+  .img-portfolio:hover{
+    transform: scale(1.2); /*rotate(45deg)*/
+  }
+
+  .contato .icons{
+    text-align: center;
+  }
+
+  .contato a{
+    color: rgb(38, 49, 150);
+    font-size: 5em;
+    transition: text-shadow 1s;
+  }
+
+  .contato a:active,
+  .contato a:hover{
+    text-decoration: none;
+    text-shadow: 0px 0px 20px royalblue;
   }
