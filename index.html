@@ -6,12 +6,14 @@
     <title>Vinícius Santos</title>
     <link rel="stylesheet" href="CSS/estilos.css">
     <link href="https://fonts.googleapis.com/css2?family=Bad+Script&family=Overpass&family=Work+Sans&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/76608838ad.js" crossorigin="anonymous"></script>
+      
+    <script src="https://kit.fontawesome.com/76608838ad.js" crossorigin="anonymous">
+    </script>
   </head>
   <body>
     <header>
         <nav class="menu">
-          <ul>
+          <ul class="container">
             <li><a href="#sobre">Sobre</a></li>
             <li><a href="#portfolio">Projetos</a></li>
             <li><a href="#contato">Contato</a></li>
@@ -23,45 +25,91 @@
         </div>
            
     </header>
-  </header>
-  <section class = "portfolio" id="portfolio">
-    <h2>Projetos</h2>
+  
+    <section class="sobre container" id="sobre">
+      <h2>Sobre</h2>
 
-    <div class="grid">
-      <figure>
-        <img class="img-portfolio" src="./img/luminaria.jpg" alt="luminaria">
-        <figcaption>Ideias</figcaption>
+      <figure class="avatar">
+        <img src="./img/perfil.jpg" alt="perfil">
       </figure>
-      <figure>
-        <img class="img-portfolio" src="./img/drinking-horn.jpg" alt=">drinking-horn">
-        <figcaption>Galeria</figcaption>
-      </figure>
-      <figure>
-        <img class="img-portfolio" src="./img/clock.jpg" alt="clock">
-        <figcaption>Recentes</figcaption>
-      </figure>
-      <figure>
-        <img class="img-portfolio" src="./img/mago.jpg" alt="mago">
-        <figcaption>Projetos pessoais</figcaption>
-      </figure>
-    </div>    
-  </section>
-  <section class="contato" id="contato">
-    <h2>Contato</h2>
-    <div class="grid icons">
-      <a target="_blank" href="https://github.com/viniciusgabriels">
-        <i class="fab fa-github"></i>
-      </a>
-      <a href="https://www.instagram.com/tiu_alu">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a target="_blank" href="https://www.linkedin.com/in/viniciusgabriels">
-        <i class="fab fa-linkedin"></i>
-      </a>
-      <a href="mailto:viniciusgabriel.rs@hotmail.com">
-        <i class="far fa-envelope"></i>
-      </a>
-    </div>
-  </section>
-</body>
+
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente nulla est saepe quo eaque numquam quis aliquam sequi, vel optio iste incidunt suscipit quisquam ut ipsum eveniet. Atque, accusantium architecto!</p>
+
+      <p>Ab sed provident nostrum mollitia quo vero esse recusandae eligendi ipsa laudantium maxime, velit praesentium temporibus ex obcaecati accusamus ut consectetur quas. Ad at culpa corrupti quo maiores illo ex.</p>
+
+      <p>Harum, corporis! Veritatis blanditiis perferendis asperiores deserunt est! Cum molestiae laboriosam totam, voluptatum ullam est sequi suscipit. Excepturi adipisci nostrum sint quibusdam cupiditate non laudantium praesentium a? Nemo, eligendi vero.</p>
+
+      <p>Este site foi construído durante a <a href="https://www.alura.com.br/imersao-css">Imersão CSS</a> da Alura!</p>  
+
+    </section>
+
+    <section class = "portfolio container" id="portfolio">
+      <h2>Projetos</h2>
+
+      <div class="grid">
+
+        <div class="flip-card">
+          <div class="card">
+            <figure class="card-front">
+              <img class="img-portfolio" src="./img/luminaria.jpg" alt="luminaria">            
+            </figure>
+            <div class="card-back">
+              <h3>Ideias</h3>         
+            </div>
+          </div>
+        </div>
+        
+        <div class="flip-card">
+          <div class="card">
+            <figure class="card-front">
+              <img class="img-portfolio" src="./img/drinking-horn.jpg" alt=">drinking-horn">
+            </figure>
+            <div class="card-back">
+              <h3>Galeria</h3>        
+            </div>
+          </div>
+        </div>
+
+        <div class="flip-card">
+          <div class="card">
+            <figure class="card-front">
+              <img class="img-portfolio" src="./img/clock.jpg" alt="clock">
+            </figure>
+            <div class="card-back">
+              <h3>Recentes</h3>         
+            </div>
+          </div>
+        </div>
+
+        <div class="flip-card">
+          <div class="card">
+            <figure class="card-front">
+              <img class="img-portfolio" src="./img/mago.jpg" alt="mago">
+            </figure>
+            <div class="card-back">
+              <h3>Projetos futuros</h3>
+            </div>
+          </div>
+        </div>
+      </div>    
+    </section>
+
+    <section class="contato container" id="contato">
+      <h2>Contato</h2>
+      <div class="grid icons">
+        <a target="_blank" href="https://github.com/viniciusgabriels">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.instagram.com/tiu_alu">
+          <i class="fab fa-instagram"></i>
+        </a>
+        <a target="_blank" href="https://www.linkedin.com/in/viniciusgabriels">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="mailto:viniciusgabriel.rs@hotmail.com">
+          <i class="far fa-envelope"></i>
+        </a>
+      </div>
+    </section>
+  </body>
 </html>

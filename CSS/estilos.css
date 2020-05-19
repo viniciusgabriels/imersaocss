@@ -1,3 +1,4 @@
+/* soft reset do css */
 *{
   margin: 0;
   padding: 0;
@@ -22,7 +23,17 @@ body{
 /*Se a tela tiver pelo menos 600px vai carregar estes estilos*/
 @media (min-width: 600px) {
   body{
+    background-attachment: fixed;
+    background-size: cover;
     font-size: 18px;
+  }
+}
+
+/* breakpoint */
+@media (min-width: 1200px) {
+  body {
+   
+    font-size: 20px;
   }
 }
 
@@ -34,50 +45,49 @@ header{
 }    
  
 
-  .menu{
-      background-color: gray;
-      position: fixed;
-      width: 100vw;
-      top: 0px;
-      z-index: 1;
-  }
+.menu{
+  background-color: gray;
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  z-index: 1;
+}
   
-  .menu a{
-    display: block;
-    padding: 10px 20px;
-    transition: color 1s, background-color 1s;
-  }
+.menu ul{
+  display: flex;
+  justify-content: space-around;
+}
+  
+.menu li{
+  list-style: none;
+}
 
-  .menu ul{
-    display: flex;
-    justify-content: space-around;
-  }
-  
-  .menu li{
-    list-style: none;
-  }
-  
-  .menu a:active,
-  .menu a:hover{
-    background-color: rgb(38, 49, 150);
-    color: gray;
-  }
+.menu a{
+  display: block;
+  padding: 10px 20px;
+  transition: background-color 1s, color 1s;
+}
 
-  a{
-    color: rgb(38, 49, 150);
-    text-decoration: none;
-  }
+.menu a:active,
+.menu a:hover{
+  background-color: rgb(38, 49, 150);
+  color: gray;
+}
+
+a{
+  color: rgb(38, 49, 150);
+  text-decoration: none;
+}
   
-  a:active,
-  a:hover{
-    text-decoration: currentColor;
-    text-decoration-color: black;
-  }
+a:active,
+a:hover{
+  text-decoration: underline;
+}
   
 .titulo{
   transform: scale(0.2) translateY(60vh);
   opacity: 0;
-  animation: 1s ease 2s animaTitulo forwards;
+  animation: 1s ease 0.5s animaTitulo forwards;
 }
 
 @keyframes animaTitulo{
@@ -85,102 +95,178 @@ header{
     transform: scale(0.2) translateY(60vh);
     opacity: 0;
   }
-  
   to {
     transform: scale(1) translateY(0);
     opacity: 1;
   }
 }
 
-
-  .site-subtitle,
-  .site-title{
-    color: rgb(38, 49, 150);
-    text-align: center;
-  }
+.site-subtitle,
+.site-title{
+  color: rgb(38, 49, 150);
+  text-align: center;
+}
   
-  .site-title{
-    font-size: 4em;
-    font-family: 'Bad Script', cursive;
-  }
+.site-title{
+  font-size: 4em;
+  font-family: 'Bad Script', cursive;
+}
 
-  .site-subtitle{
-    font-family: 'Work Sans', sans-serif;
-    line-height: 1.8em;
-  }
- 
-  .contato,
-  .portfolio {
-    padding: 2em;
-    min-height: 100vh;
-  }
+.site-subtitle{
+  font-style: italic;
+  font-family: 'Work Sans', sans-serif;
+  line-height: 1.8em;
+}
 
-  .contato h2,
-  .portfolio h2 {
-    font-size: 2em;
-    font-family: 'Work Sans', sans-serif;
-    color: rgb(38, 49, 150);
-    margin-bottom: 1.8;
-  }
+.sobre,
+.contato,
+.portfolio {
+  padding: 2em;
+  min-height: 100vh;
+}
 
+@media (min-width: 1200px){
+  .container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+  }
+}
+
+.sobre h2
+.contato h2,
+.portfolio h2 {
+  font-family: 'Work Sans', sans-serif;
+  color: rgb(38, 49, 150);
+  margin-bottom: 1.8;
+  font-size: 2em;
+}
+
+.sobre p{
+  color: black;
+  text-indent: 1em;
+  margin-bottom: 1.4em;
+  text-align: justify;
+}
+
+.sobre a{
+  color: rgb(38, 49, 150);
+  text-decoration: underline;
+}
+
+.sobre a:active,
+.sobre a:hover{
+  background-color: rgb(38, 49, 150);
+  text-decoration: none;
+  color: white;
+}
+
+.sobre .avatar{
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  margin-left: 2em;
+}
+
+@media (min-width: 600px) {
+  .sobre .avatar {
+    clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+    float: right;
+  }
+}
+
+.portfolio .grid{
+  display: grid;
+  gap: 2em;
+}
+
+@media (min-width: 600px){
   .portfolio .grid{
-    display: grid;
-    gap: 2em;
+    grid-template-columns: 240px 240px;
+    justify-content: center;
   }
+}
 
-  @media (min-width: 600px){
-    .portfolio .grid{
-      grid-template-columns: 240px 240px;
-      justify-content: center;
-    }
+@media (min-width: 800px){
+  .portfolio .grid{
+    grid-template-columns: repeat(3, 240px);
+    justify-content: center;
   }
+}
 
-  @media (min-width: 800px){
-    .portfolio .grid{
-      grid-template-columns: repeat(3, 240px);
-      justify-content: center;
-    }
+@media (min-width: 1200px){
+  .portfolio .grid{
+    grid-template-columns: repeat(4, 240px);
+    justify-content: center;
+    align-content: center;
+    height: calc(100vh - 5.5em - 50px);
   }
+}
 
-  @media (min-width: 1200px){
-    .portfolio .grid{
-      grid-template-columns: repeat(4, 240px);
-      justify-content: center;
-      align-content: center;
-      height: calc(100vh - 5.5em - 50px);
-    }
-  }
+.flip-card{
+  height: 220px;
+  perspective: 800px;
+}
 
-  .portfolio figure{
-    text-align: center;
-  }
+.flip-card:hover .card{
+  transform: rotateY(180deg)
+}
 
-  .img-portfolio{
-    height: 220px;
-    width: 170px;
-    object-fit: cover;
-    object-position: left bottom;
-    border-radius: 5%;
-    transition: transform 500ms;
-  }
+.card{
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
 
-  .img-portfolio:active,
+.card-front,
+.card-back{
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+}
+
+.card-back{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, .7);
+  height: 220px;
+  width: 100%;
+  border-radius: 5%;
+  transform: rotateY(180deg);
+}
+
+.portfolio figure{
+  text-align: center;
+}
+
+.img-portfolio{
+  height: 220px;
+  width: 100%;
+  object-fit: cover;
+  object-position: left bottom;
+  border-radius: 5%;
+  transition: transform 500ms;
+}
+
+  /*.img-portfolio:active,
   .img-portfolio:hover{
-    transform: scale(1.2); /*rotate(45deg)*/
-  }
+    transform: scale(1.2); /*rotate(45deg)
+    border-radius: 5%;
+  }*/
 
-  .contato .icons{
-    text-align: center;
-  }
+.contato .icons{
+  text-align: center;
+}
 
-  .contato a{
-    color: rgb(38, 49, 150);
-    font-size: 5em;
-    transition: text-shadow 1s;
-  }
+.contato a{
+  color: rgb(38, 49, 150);
+  font-size: 5em;
+  transition: text-shadow 1s;
+}
 
-  .contato a:active,
-  .contato a:hover{
-    text-decoration: none;
-    text-shadow: 0px 0px 20px royalblue;
-  }
+.contato a:active,
+.contato a:hover{
+  text-decoration: none;
+  text-shadow: 0px 0px 20px royalblue;
+}
